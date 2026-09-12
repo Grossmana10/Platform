@@ -1,0 +1,6 @@
+/* Reduced waveform density and subtle ambient background breathing */
+.wave-bars .bar:nth-child(even),.played .bar:nth-child(even){display:none}.wave-bars,.played{gap:1.5px}
+body::before{transform-origin:66% 35%;animation:spectrumBreath 14s ease-in-out infinite}.dark-mode::before{animation-name:spectrumBreathDark}
+@keyframes spectrumBreath{0%,100%{opacity:.16;transform:scale(1.06);filter:blur(60px) saturate(.82)}50%{opacity:.2;transform:scale(1.1);filter:blur(64px) saturate(.9)}}
+@keyframes spectrumBreathDark{0%,100%{opacity:.24;transform:scale(1.06);filter:blur(62px) saturate(.76)}50%{opacity:.3;transform:scale(1.1);filter:blur(67px) saturate(.86)}}
+@media(prefers-reduced-motion:reduce){body::before,.dark-mode::before{animation:none}}
