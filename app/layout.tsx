@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import "./cosmic-background.css";
 
 export const metadata: Metadata = {
   title: "Platform — Audio Review Workspace",
