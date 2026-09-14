@@ -1,0 +1,69 @@
+.workspace {
+  background: #f8f9ff;
+}
+
+.workspace::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background:
+    radial-gradient(circle at 16% 24%, rgba(115, 92, 255, 0.08) 0 1px, transparent 1.4px),
+    radial-gradient(circle at 74% 18%, rgba(111, 140, 255, 0.07) 0 1px, transparent 1.5px),
+    radial-gradient(circle at 42% 72%, rgba(156, 119, 255, 0.055) 0 1px, transparent 1.3px),
+    radial-gradient(ellipse 52% 36% at 88% 18%, rgba(136, 119, 255, 0.09), transparent 68%),
+    radial-gradient(ellipse 42% 30% at 8% 92%, rgba(148, 171, 255, 0.08), transparent 72%);
+  background-size:
+    138px 138px,
+    184px 184px,
+    226px 226px,
+    100% 100%,
+    100% 100%;
+  opacity: 0.5;
+}
+
+.workspace::after {
+  content: "";
+  position: fixed;
+  inset: auto -18vw -34vh -12vw;
+  height: 58vh;
+  pointer-events: none;
+  z-index: 0;
+  border-radius: 50%;
+  background: radial-gradient(ellipse at center, rgba(146, 163, 255, 0.11) 0%, rgba(174, 187, 255, 0.055) 38%, transparent 72%);
+  filter: blur(28px);
+  opacity: 0.5;
+}
+
+.workspace.dark {
+  background: #090c14;
+}
+
+.workspace.dark::before {
+  background:
+    radial-gradient(circle at 14% 22%, rgba(178, 167, 255, 0.24) 0 0.9px, transparent 1.4px),
+    radial-gradient(circle at 72% 16%, rgba(121, 143, 255, 0.18) 0 1px, transparent 1.5px),
+    radial-gradient(circle at 38% 74%, rgba(192, 139, 255, 0.14) 0 0.9px, transparent 1.3px),
+    radial-gradient(ellipse 54% 38% at 88% 16%, rgba(80, 64, 166, 0.16), transparent 70%),
+    radial-gradient(ellipse 40% 26% at 4% 94%, rgba(56, 75, 145, 0.14), transparent 72%);
+  background-size:
+    142px 142px,
+    190px 190px,
+    232px 232px,
+    100% 100%,
+    100% 100%;
+  opacity: 0.5;
+}
+
+.workspace.dark::after {
+  background: radial-gradient(ellipse at center, rgba(79, 70, 160, 0.16) 0%, rgba(49, 60, 119, 0.08) 42%, transparent 72%);
+  opacity: 0.5;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .workspace::before,
+  .workspace::after {
+    animation: none;
+  }
+}
